@@ -10,5 +10,4 @@ function actualizaLinkBoton() {
 
     const boton = document.querySelector("#botonLink");
     boton.href = link;
-    console.log(boton)
 }
