@@ -1,5 +1,5 @@
 function linkPerfil(numero) {
-    let link = `https://api.whatsapp.com/send?phone=${numero}`;
+    let link = `https://api.whatsapp.com/send?phone=51${numero}`;
     return link;
 }
 
