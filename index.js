@@ -1,13 +1,14 @@
-function cuentaWhatsapp(numero) {
-    let direccion = `https://api.whatsapp.com/send?phone=51${numero}`;
-    return direccion;
+function linkPerfil(numero) {
+    let link = `https://api.whatsapp.com/send?phone=${numero}`;
+    return link;
 }
 
-function irAWhatsapp() {
+function actualizaLinkBoton() {
     const input = document.querySelector("#inputNumero");
     const value = input.value;
-    const direccion = cuentaWhatsapp(value);
+    const link = linkPerfil(value);
 
     const boton = document.querySelector("#botonLink");
-    boton.href = direccion;
+    boton.href = link;
+    console.log(boton)
 }
