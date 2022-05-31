@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Qui&eacute;n eres?</title>
+    <meta name="description" content="¿Sabías que puedes ver el perfíl de WhatsApp del número que ingreses sin necesidad de agregarl@ a tus contactos?">
+    <title>¿Quién eres?</title>
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="style.css">
+    <script defer src="./js/pwa.js"></script>
+    <script defer src="./js/index.js"></script>
 </head>
 <body>
     <header>
-        <h1>¿Qui&eacute;n eres?</h1>
+        <h1>¿Quién eres?</h1>
     </header>
     <main>
         <section>
-            <h2>Puedes ver el perf&iacute;l de WhatsApp del número que ingreses sin necesidad de agregarl@ a tus contactos</h2>
-            <form action="">
-                <input type="number" placeholder="Ingresa el n&uacute;mero" id="inputNumero" onchange="actualizaLinkBoton()">
-                <a href="#" id="botonLink">Ver</a>
+            <h2>Puedes ver el perfíl de WhatsApp del número que ingreses sin necesidad de agregarl@ a tus contactos</h2>
+            <form class="form" action="https://api.whatsapp.com/send">
+                <fieldset class="phone-number">
+                    <input id="country-code" type="tel" placeholder="+51" list="country-codes" autocomplete="tel-country-code" required minlength="2" maxlength="6">
+                    <datalist id="country-codes">
+                        <option value="+51">
+                        <option value="+1">
+                        <option value="+128">
+                    </datalist>
+                    <input id="telephone" type="tel" placeholder="989 567 891" autocomplete="tel-national" required minlength="5" maxlength="22">
+                </fieldset>
+                <input type="hidden" name="phone" id="phone">
+                <input type="submit" value="Ver perfíl" id="submit" class="submit">
             </form>
         </section>
     </main>
-    <script src="index.js"></script>
 </body>
 </html>
