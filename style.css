@@ -1,50 +1,69 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+    font-size: clamp(0.62rem, 0.425rem + 1vw, 0.79rem);
+    font-family: Roboto, sans-serif;
 }
 
 body {
-    font-family: sans-serif;
+    font-size: 1.6rem;
     background-color: #f2f2f2;
 }
 
 h1 {
-    margin: 30px 0 10px;
-    font-size: 30px;
+    margin-block: 30px 1.1rem;
+    font-size: 3.0rem;
     text-align: center;
 }
 
 h2 {
-    margin: 10px 15px;
-    font-size: 15px;
+    margin-block: 10px;
+    margin-inline: 15px;
     text-align: center;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    width: 75%;
-    max-width: 400px;
+    align-items: center;
+    margin-inline: auto;
+    inline-size: 75%;
+    max-inline-size: 400px;
+}
+
+.phone-number {
+    display: flex;
+    margin-block: 10px 16px;
+}
+
+.phone-number input {
+    border: 1px solid #c2c2c2;
+    border-radius: 8px;
+}
+
+#country-code {
+    margin-inline-end: 8px;
+    inline-size: 6.5rem;
+    block-size: 48px;
+}
+
+#telephone {
+    min-inline-size: 110px;
+    inline-size: 100%;
 }
 
 form input {
-    margin: 0 auto;
-    height: 30px;
-    width: 150px;
-    border-radius: 8px;
     text-align: center;
 }
 
-form a {
-    margin: 10px auto;
-    height: 30px;
-    width: 70px;
+.submit {
+    margin-inline: auto;
+    padding-block: 12px;
+    padding-inline: 16px;
     color: #fff;
-    background-color: #01e675;
-    border-radius: 8px;
-    line-height: 30px;
-    text-align: center;
-    text-decoration: none;
+    background-color: #06776c;
+    border-radius: 16px;
+    cursor: not-allowed;
+}
+
+form:valid .submit {
+    cursor: pointer;
 }
