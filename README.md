@@ -1,2 +1,14 @@
 # Ver perfíl de WhatsApp
-Ingresa un número. Si tiene cuenta de WhatsApp, podras ver la sin tener que agregar el número a tus contactos.
+Esta página web te permite ver el perfíl de WhatsApp del número que ingreses sin tener que agregarlo a tus contactos.
+
+[_https://quien-eres.netlify.app/_](https://quien-eres.netlify.app/)
+
+## Características
+- Funciona sin conexión
+## Construido con
+- HTML
+- CSS
+- JavaScript
+- Service Worker
+## Licencia
+> Este proyecto está licenciado bajo la Licencia MIT
