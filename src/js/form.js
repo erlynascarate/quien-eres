@@ -5,7 +5,10 @@ function updateTheInputThatWillBeSent() {
     const countryCode = form.querySelector("#country-code");
     const telephone = form.querySelector("#telephone");
 
-    const number = `${countryCode.value}${telephone.value}`.replace(/[^0-9]/g, "");
+    const number = `${countryCode.value}${telephone.value}`.replace(
+        /[^0-9]/g,
+        ""
+    );
 
     const phone = form.querySelector("#phone");
     phone.value = number;
