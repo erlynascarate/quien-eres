@@ -13,9 +13,9 @@ body {
 }
 
 h1 {
-    margin-block: 3.0rem 2.0rem;
+    margin-block: 3rem 2rem;
     margin-inline: 15px;
-    font-size: 3.0rem;
+    font-size: 3rem;
     text-align: center;
 }
 
@@ -25,6 +25,7 @@ h2 {
     text-align: center;
 }
 
+/* ---- Form ---- */
 .form {
     display: flex;
     flex-direction: column;
@@ -61,11 +62,11 @@ form input {
 
 .submit {
     margin-inline: auto;
+    border-radius: 16px;
     padding-block: 12px;
     padding-inline: 16px;
     color: var(--white);
     background-color: hsl(174deg 90% 25%);
-    border-radius: 16px;
     cursor: not-allowed;
 }
 
