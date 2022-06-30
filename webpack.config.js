@@ -4,6 +4,9 @@ const path = require("path"),
     HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 
 module.exports = {
+    output: {
+        clean: true,
+    },
     module: {
         rules: [
             {
