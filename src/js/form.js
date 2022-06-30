@@ -2,8 +2,8 @@ const form = document.querySelector(".form");
 
 form.addEventListener("submit", updateTheInputThatWillBeSent);
 function updateTheInputThatWillBeSent() {
-    const countryCode = form.querySelector("#country-code");
-    const telephone = form.querySelector("#telephone");
+    const countryCode = form.querySelector("#country-code"),
+        telephone = form.querySelector("#telephone-number");
 
     const number = `${countryCode.value}${telephone.value}`.replace(
         /[^0-9]/g,
@@ -23,7 +23,7 @@ function updateTheInputsWithTheAllowedCharacters(event) {
         case "country-code":
             charactersToReplace = /[^0-9+]/g;
             break;
-        case "telephone":
+        case "telephone-number":
             charactersToReplace = /[^0-9 ()-]/g;
             break;
     }

@@ -12,24 +12,25 @@
     </head>
     <body>
         <header>
-            <h1>Ver perfíl de WhatsApp</h1>
+            <h1 class="header__title">Ver perfíl de WhatsApp</h1>
         </header>
         <main>
             <section>
-                <h2>
+                <h2 class="container__title">
                     Puedes ver el perfíl de WhatsApp del número que ingreses sin
                     necesidad de agregarl@ a tus contactos
                 </h2>
                 <form class="form" action="https://api.whatsapp.com/send">
-                    <fieldset class="phone-number">
+                    <fieldset class="telephone">
                         <input
                             id="country-code"
+                            class="telephone__input"
                             type="tel"
                             placeholder="+51"
-                            list="country-codes"
-                            required
                             minlength="2"
                             maxlength="6"
+                            required
+                            list="country-codes"
                         />
                         <datalist id="country-codes">
                             <option value="+51"></option>
@@ -38,20 +39,20 @@
                         </datalist>
 
                         <input
-                            id="telephone"
+                            id="telephone-number"
+                            class="telephone__input"
                             type="tel"
                             placeholder="989 567 891"
-                            required
                             minlength="5"
                             maxlength="22"
+                            required
                         />
                     </fieldset>
-                    <input type="hidden" name="phone" id="phone" />
+                    <input id="phone" type="hidden" name="phone" />
                     <input
+                        class="form__button"
                         type="submit"
                         value="Ver perfíl"
-                        id="submit"
-                        class="submit"
                     />
                 </form>
             </section>

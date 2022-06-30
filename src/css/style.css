@@ -1,3 +1,4 @@
+/* ---- Global ---- */
 :root {
     --white: hsl(0deg 0% 100%);
 }
@@ -10,19 +11,20 @@ html {
 body {
     font-size: 1.6rem;
     background-color: hsl(0deg 0% 95%);
+    text-align: center;
 }
 
-h1 {
+/* ---- Header ---- */
+.header__title {
     margin-block: 3rem 2rem;
     margin-inline: 15px;
     font-size: 3rem;
-    text-align: center;
 }
 
-h2 {
+/* ---- Container ---- */
+.container__title {
     margin-block: 10px;
     margin-inline: 15px;
-    text-align: center;
 }
 
 /* ---- Form ---- */
@@ -35,32 +37,21 @@ h2 {
     max-inline-size: 400px;
 }
 
-.phone-number {
-    display: flex;
+.telephone {
+    display: grid;
+    grid-template-columns: 6.5rem minmax(110px, 1fr);
+    gap: 8px;
     margin-block: 10px 16px;
 }
 
-.phone-number input {
+.telephone__input {
     border: 1px solid hsl(0deg 0% 76%);
     border-radius: 8px;
-}
-
-#country-code {
-    margin-inline-end: 8px;
-    inline-size: 6.5rem;
     block-size: 48px;
+    text-align: inherit;
 }
 
-#telephone {
-    min-inline-size: 110px;
-    inline-size: 100%;
-}
-
-form input {
-    text-align: center;
-}
-
-.submit {
+.form__button {
     margin-inline: auto;
     border-radius: 16px;
     padding-block: 12px;
@@ -70,6 +61,6 @@ form input {
     cursor: not-allowed;
 }
 
-form:valid .submit {
+.form:valid .form__button {
     cursor: pointer;
 }
